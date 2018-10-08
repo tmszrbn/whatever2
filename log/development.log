@@ -2445,3 +2445,25 @@ bin/rails:4:in `<main>'
   [1m[36mSpree::Taxon Load (1.4ms)[0m  [1m[34mSELECT  "spree_taxons".* FROM "spree_taxons" INNER JOIN "spree_taxonomies" ON "spree_taxonomies"."id" = "spree_taxons"."taxonomy_id" INNER JOIN "spree_products_taxons" ON "spree_taxons"."id" = "spree_products_taxons"."taxon_id" WHERE "spree_products_taxons"."product_id" = $1 AND "spree_taxonomies"."name" = $2 LIMIT $3[0m  [["product_id", 37], ["name", "Categories"], ["LIMIT", 1]]
   [1m[36mSpree::TaxCategory Load (37.4ms)[0m  [1m[34mSELECT  "spree_tax_categories".* FROM "spree_tax_categories" WHERE "spree_tax_categories"."deleted_at" IS NULL AND "spree_tax_categories"."is_default" = $1 LIMIT $2[0m  [["is_default", "t"], ["LIMIT", 1]]
   [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mSpree::Preference Load (1.6ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/confirmable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/validatable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (1.7ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/confirmable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.2ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mSpree::Preference Load (48.1ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/confirmable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.7ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/validatable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/auth_configuration/confirmable"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.5ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.4ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[36mSpree::Preference Load (0.3ms)[0m  [1m[34mSELECT  "spree_preferences".* FROM "spree_preferences" WHERE "spree_preferences"."key" = $1 LIMIT $2[0m  [["key", "spree/app_configuration/admin_path"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (125.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "spree_taxons"[0m
+  [1m[35m (22.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "spree_taxonomies"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mSpree::Taxon Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "spree_taxons" WHERE "spree_taxons"."permalink" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
