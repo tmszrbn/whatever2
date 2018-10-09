@@ -1,7 +1,10 @@
-class UploadProductsJob < ApplicationJob
+class UploadProductsJob < ActiveJob::Base
   queue_as :default
 
-  def perform(file, data_inserter)
-    FileUploader.new(data_inserter).upload(file)
+  rescue_from TypeError do |exception|
+  end
+
+  def perform(file)
+    FileUploader.new(ProductsInserter).upload(file)
   end
 end

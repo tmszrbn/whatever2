@@ -1,0 +1,6 @@
+<h3>Upload from file</h3>
+<%= form_tag upload_admin_products_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag 'Import CSV' %>
+<% end %>
+<h3>Create product</h3>

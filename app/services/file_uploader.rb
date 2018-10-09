@@ -16,9 +16,9 @@ class FileUploader
   private
 
   def file_to_hash(file)
-    extension = "#{File.extname(file)[1..-1].capitalize}Formatter"
+    extension = "#{File.extname(file[:name])[1..-1].capitalize}Formatter"
     formatter = extension.constantize
-    @hash = formatter.format(file)
+    @hash = formatter.format(file[:body])
   end
 
   def hash_to_db

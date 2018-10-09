@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CsvFormatter, type: :service do
-  let(:csv) { file_fixture('sample.csv') }
+  let(:csv) { file_fixture('sample.csv').read }
   describe '.format' do
     it 'reads the file and returns an array' do
       expect(CsvFormatter.format(csv).class).to eq Array 
