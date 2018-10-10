@@ -31,11 +31,11 @@ RSpec.describe ProductsInserter, type: :service do
       expect(product1.master).to eq variant1
       expect(product2.master).to eq variant2
     end
-    it 'creates new taxons using hashes' do
+    it 'creates new shipping categories using hashes' do
       expect(shipping_category1.name).to eq category1
       expect(shipping_category2.name).to eq category2
     end
-    it 'new taxons are associated with products' do
+    it 'new shipping categories are associated with products' do
       expect(product1.shipping_category).to eq shipping_category1
       expect(product2.shipping_category).to eq shipping_category2
     end
